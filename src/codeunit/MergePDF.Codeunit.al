@@ -37,7 +37,13 @@ codeunit 50149 MergePDF
     begin
         JArrayPDF := JArrayPDFToMerge;
     end;
-
+    
+    procedure InsertPdf(base64pdf: JsonObject)
+    begin
+    Clear(JArrayPDFToMerge);
+    JArrayPDFToMerge := base64pdf;
+    end;
+    
     var
         JObjectPDFToMerge: JsonObject;
         JArrayPDFToMerge: JsonArray;
